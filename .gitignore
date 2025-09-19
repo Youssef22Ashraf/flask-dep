@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+.env
+venv/
+.venv/
+
+# Databases
+*.db
+instance/
+src/instance/
+
+# pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE/editor
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+#docker
+.dockerignore
+
+#rest files
+flask-deployment proposal.pdf
+فلاسك بروجكت عرض أولي.pdf
+To-do App Deployment Documentation.docx
+*.zip
