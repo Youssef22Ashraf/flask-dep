@@ -7,8 +7,8 @@ on:
   pull_request:
 
 jobs:
-  Application-Setup:
-    name: Application Setup
+  Application-Setup-Testing:
+    name: Application Setup and Testing
     runs-on: ubuntu-latest
 
     steps:
@@ -25,19 +25,14 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           pip install pytest
-  Testing-Application:
-    name: Run Test Script
-    runs-on: ubuntu-latest
-    needs: Application-Setup
-
-    steps:
+          
       - name: Run tests
         run: pytest -v
 
   docker:
     name: Build Docker Image
     runs-on: ubuntu-latest
-    needs: Testing-Application
+    needs: Application-Setup-Testing
 
     steps:
       - name: Checkout code
