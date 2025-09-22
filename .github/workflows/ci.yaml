@@ -59,6 +59,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: Verify kubectl
+        run: kubectl version --client
+
       - name: Deploy to Kubernetes
         run: |
           kubectl apply -f k8s/namespace.yaml
