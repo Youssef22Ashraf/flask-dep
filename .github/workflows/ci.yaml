@@ -68,3 +68,9 @@ jobs:
           kubectl apply -f k8s/deployment.yaml
           kubectl apply -f k8s/service.yaml
           kubectl rollout status deployment/todo-app -n todo-app
+    
+      - name: Verify App is Running
+        run: |
+          # Give pods a little time to start
+          sleep 25
+          curl http://localhost:30050 || exit 1
