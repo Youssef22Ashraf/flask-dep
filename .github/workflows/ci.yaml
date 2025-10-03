@@ -52,7 +52,7 @@ jobs:
 
   Kubernetes:
     name: Deploy to Kubernetes
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     needs: docker
 
     steps:
@@ -64,10 +64,10 @@ jobs:
 
       - name: Deploy to Kubernetes
         run: |
-          kubectl apply -f k8s/namespace.yaml --validate=false
-          kubectl apply -f k8s/deployment.yaml --validate=false
-          kubectl apply -f k8s/service.yaml --validate=false
-          kubectl rollout status deployment/todo-app -n todo-app --validate=false
+          kubectl apply -f k8s/namespace.yaml 
+          kubectl apply -f k8s/deployment.yaml 
+          kubectl apply -f k8s/service.yaml 
+          kubectl rollout status deployment/todo-app -n todo-app 
     
       - name: Verify App is Running
         run: |
