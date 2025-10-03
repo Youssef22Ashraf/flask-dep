@@ -72,5 +72,5 @@ jobs:
       - name: Verify App is Running
         run: |
           # Give pods a little time to start
-          sleep 25
+          sleep 26
           curl http://localhost:30050 || exit 1
