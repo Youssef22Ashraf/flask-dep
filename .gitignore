@@ -35,3 +35,6 @@ flask-deployment proposal.pdf
 فلاسك بروجكت عرض أولي.pdf
 To-do App Deployment Documentation.docx
 *.zip
+
+# self hosted
+actions-runner/
