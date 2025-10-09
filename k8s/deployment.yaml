@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: todo-app
-        image: youssefashraf265/todo-app:latest
+        image: youssefashraf265/todo-app:latest # replace with your Docker Hub username 
         ports:
         - containerPort: 5000
         resources:
